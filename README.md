@@ -15,10 +15,26 @@ This API acts as a software bridge between your LabVIEW code and the CANSHARK ha
 
 The main VIs (Virtual Instruments) you will use are organized logically in the project:
 
-*   **`CAN_init.vi`**: This is the entry point. Call this first to initialize the CAN interface and get a reference to the device.
-*   **`Device_Write.vi`**: Use this to send a CAN message to the bus. You provide the CAN frame data, and the API handles the transmission.
-*   **`Device_Read.vi`**: Call this to read a CAN message from the bus. It returns the raw CAN frame data.
-*   **`Device_Close.vi`**: **Essential for stability!** Always call this VI when your application is done to close the connection and free up resources.
+*   **`CANShark_GetConnectedDevices.vi`**: Call this first to detect and list all connected CANSHARK devices. Returns device information and handles.
+
+*   **`CANShark_DeviceOpen.vi`**: Open a connection to a specific CANSHARK device. You provide the device handle from `GetConnectedDevices`, and this VI establishes communication.
+
+*   **`CANShark_SetBaudrate.vi`**: Configure the CAN bus baud rate (e.g., 125 kbps, 250 kbps, 500 kbps, 1 Mbps) for the connected device.
+
+*   **`CANShark_SetBitrate.vi`**: Set the CAN FD data bitrate for high-speed data transmission (if using CAN FD protocol).
+
+*   **`CANShark_DeviceWrite.vi`**: Use this to send a CAN message to the bus. You provide the CAN frame data (ID, Data, DLC), and the API handles the transmission.
+
+*   **`CANShark_DeviceRead.vi`**: Call this to read a CAN message from the bus. It returns the raw CAN frame data with timestamp.
+
+*   **`CANShark_DeviceClose.vi`**: **Essential for stability!** Always call this VI when your application is done to close the connection, release resources, and properly shut down the device.
+
+### Typical Workflow:
+1. **GetConnectedDevices** → Detect available devices
+2. **DeviceOpen** → Connect to a specific device
+3. **SetBaudrate/SetBitrate** → Configure CAN parameters
+4. **DeviceWrite/DeviceRead** → Send/receive CAN messages (loop as needed)
+5. **DeviceClose** → Clean up and disconnect
 
 ## 🏗️ Project Architecture
 
