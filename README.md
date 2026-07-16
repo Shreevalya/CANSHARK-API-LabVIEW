@@ -32,5 +32,29 @@ The code is structured to be modular and easy to navigate:
 
 1.  **Clone or Download** this repository.
 2.  **Open** the `LABVIEW.lvproj` file in LabVIEW.
-3.  **Place** the required `CANSHarkApi_Dll.dll` file in the project directory.
-4.  **Open** and run `Example/Sample_application.vi` to see the API in action.
+
+## ⚠️ Important: DLL File Not Included
+
+The `CANSHarkApi_Dll.dll` is **proprietary software** and is **NOT** included in this repository.
+
+### How to Obtain the DLL:
+
+1. **Purchase CANSHARK Hardware**: The DLL is provided exclusively with the purchase of a CANSHARK device.
+2. **Contact CANSHARK Support**:
+   - Visit the official CANSHARK website
+   - Contact their sales/support team
+   - The DLL will be provided with the device driver package
+
+### Why It's Not Included:
+- The DLL is copyrighted/proprietary property of CANSHARK
+- It cannot be redistributed without permission
+
+### After You Obtain the DLL:
+1. Download the driver package from CANSHARK
+2. Extract the `CANSHarkApi_Dll.dll` file
+3. Place it in one of these locations:
+   - Project directory (for development)
+   - `C:\Windows\System32\` (for system-wide use)
+   - A custom path (update the Call Library Function Node accordingly)
+
+**Important**: You must have a valid CANSHARK device to use this API.
