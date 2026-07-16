@@ -37,24 +37,18 @@ The code is structured to be modular and easy to navigate:
 
 The `CANSHarkApi_Dll.dll` is **proprietary software** and is **NOT** included in this repository.
 
-### How to Obtain the DLL:
+### How to Obtain the DLL & Hardware
 
-1. **Purchase CANSHARK Hardware**: The DLL is provided exclusively with the purchase of a CANSHARK device.
-2. **Contact CANSHARK Support**:
-   - Visit the official CANSHARK website
-   - Contact their sales/support team
-   - The DLL will be provided with the device driver package
+*   **Purchase the Device**: The CANSHARK hardware and its official software development kit (SDK), which includes the necessary DLL, are available from **Digital Shark Technology**.
+*   **Official Product Page**: For detailed technical specifications, purchasing information, and to see the full capabilities of the device (including its 3-in-1 functionality as a CAN Analyzer, Data Logger, and ECU Flasher), please visit the official product page:
+    **[CANSHARK - Automotive CAN Analyzer & Data Logger](https://www.digitalshark.in/can-analyzer.php)**
 
-### Why It's Not Included:
-- The DLL is copyrighted/proprietary property of CANSHARK
-- It cannot be redistributed without permission
+### Important Legal and Usage Notes
 
-### After You Obtain the DLL:
-1. Download the driver package from CANSHARK
-2. Extract the `CANSHarkApi_Dll.dll` file
-3. Place it in one of these locations:
-   - Project directory (for development)
-   - `C:\Windows\System32\` (for system-wide use)
-   - A custom path (update the Call Library Function Node accordingly)
+*   **Proprietary Software**: The DLL is copyrighted intellectual property of Digital Shark Technology and is provided exclusively with the purchase of a CANSHARK device.
+*   **Redistribution Prohibited**: Redistribution of the DLL without explicit permission from the manufacturer is prohibited.
+*   **Valid Hardware License**: A valid CANSHARK device is required to use this API. The API is designed to function solely with the official hardware and its accompanying driver package.
+*   **For Existing Customers**: If you already own a CANSHARK device, the DLL is included in the driver package you received with your purchase. You can also contact Digital Shark Technology's support for assistance.
 
+**Without the CANSHARK hardware and its official DLL, this API cannot function.**
 **Important**: You must have a valid CANSHARK device to use this API.
