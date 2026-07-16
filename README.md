@@ -47,8 +47,6 @@ The `CANSHarkApi_Dll.dll` is **proprietary software** and is **NOT** included in
 
 *   **Proprietary Software**: The DLL is copyrighted intellectual property of Digital Shark Technology and is provided exclusively with the purchase of a CANSHARK device.
 *   **Redistribution Prohibited**: Redistribution of the DLL without explicit permission from the manufacturer is prohibited.
-*   **Valid Hardware License**: A valid CANSHARK device is required to use this API. The API is designed to function solely with the official hardware and its accompanying driver package.
-*   **For Existing Customers**: If you already own a CANSHARK device, the DLL is included in the driver package you received with your purchase. You can also contact Digital Shark Technology's support for assistance.
 
 **Without the CANSHARK hardware and its official DLL, this API cannot function.**
-**Important**: You must have a valid CANSHARK device to use this API.
+
